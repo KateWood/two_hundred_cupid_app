@@ -21,7 +21,8 @@ class MessagesController < ApplicationController
     Message.create({
       sender_id: session[:user_id],
       receiver_id: params[:id],
-      body: params[:message][:body]
+      body: params[:message][:body],
+      image: params[:message][:image]
     })
     redirect_to '/messages'
   end

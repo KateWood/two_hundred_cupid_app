@@ -9,6 +9,7 @@
   <div class="message">
     <%= message.sender.email %>
     <%= message.body %>
+    <%= image_tag message.image.url(:small) %>
     <%= link_to "Mark Read", mark_read_message_path(message) unless message.read? %>
   </div>
 <% end %>
